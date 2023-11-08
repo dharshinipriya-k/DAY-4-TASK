@@ -239,3 +239,129 @@ var h = (arr11)=>{
     return pali3;
 }
 console.log("Arrow Function: ",g([121,23,33,434,12]));
+
+console.log("----------------------------------");
+
+//STRING TO TITLE CAPS IN AN ARRAY
+
+console.log("CONVERTING STRING TO TITLE CAPS");
+//Anonymous function
+
+var str = function(str1)
+{
+  var res = [];
+  var st = str1.toString();
+  var lw = st.toLowerCase().split(" ");
+  
+  for(var i=0; i<lw.length; i++)
+  {
+    lw[i] = lw[i].charAt(0).toUpperCase() + lw[i].slice(1);
+    res.push(lw[i]);
+  }
+  return res.join(" ");
+  
+}
+console.log("Anonymous Function: ",str("guVi gEeK NeTworK"));
+
+// IIFE
+(function(str2)
+{
+  var res1 = [];
+  var st1 = str2.toString();
+  var lw1 = st1.toLowerCase().split(" ");
+  
+  for(var i=0; i<lw1.length; i++)
+  {
+    lw1[i] = lw1[i].charAt(0).toUpperCase() + lw1[i].slice(1);
+    res1.push(lw1[i]);
+  }
+  console.log("IIFE: ",res1.join(" "));
+  
+})("guVi gEeK NeTworK");
+
+//Arrow Function
+
+var str3 = (str4)=>
+{
+  var res2 = [];
+  var st2 = str4.toString();
+  var lw2 = st2.toLowerCase().split(" ");
+  
+  for(var i=0; i<lw2.length; i++)
+  {
+    lw2[i] = lw2[i].charAt(0).toUpperCase() + lw2[i].slice(1);
+    res2.push(lw2[i]);
+  }
+  return res2.join(" ");
+  
+}
+console.log("Arrow Function: ",str3("guVi gEeK NeTworK"));
+
+console.log("----------------------------------");
+
+ //MEDIAN OF TWO SORTED ARRAY
+
+ console.log("MEDIAN OF TWO SORTED ARRAY");
+
+ //Anonymous Function
+
+ var fn = function(){
+    let arr1 = [2,3,1,4,5];
+    let arr2 = [6,8,7,9];
+    
+    let array = [...arr1,...arr2].sort();
+    
+    const n=array.length;
+    
+    
+    if(n%2 !== 0)  //odd array
+      return array[Math.floor((n/2))];
+    
+    
+    else
+      return (array[Math.floor((n/2)-1)] + array[Math.floor(n/2)])/2;
+    
+    }
+    
+    console.log("Anonymous Funcion:",fn());
+
+
+    //IIFE
+
+    (function(arr3,arr4){
+        
+        let array1 = [...arr3,...arr4].sort();
+        
+        const n1=array1.length;
+        
+        
+        if(n1%2 !== 0)  //odd array
+          console.log("IIFE: ",array1[Math.floor((n1/2))]);
+        
+        
+        else
+          console.log("IIFE: ",array1[Math.floor((n1/2)-1)] + array1[Math.floor(n1/2)])/2;
+        
+        })([2,3,1,4,5],[6,8,7,9])
+
+        //Arrow Fuction
+
+        var fn2 =(arr5,arr6)=>{ 
+            let array3 = [...arr5,...arr6].sort();
+            
+            const n2=array3.length;
+            
+            
+            if(n2%2 !== 0)  //odd array
+              return array3[Math.floor((n2/2))];
+            
+            
+            else
+              return (array3[Math.floor((n2/2)-1)] + array3[Math.floor(n2/2)])/2;
+            
+            }
+            
+            console.log("Arrow Function: ",fn2([2,3,1,4,5],[6,8,7,9]));
+        
+      
+

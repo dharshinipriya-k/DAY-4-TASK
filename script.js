@@ -364,4 +364,68 @@ console.log("----------------------------------");
             console.log("Arrow Function: ",fn2([2,3,1,4,5],[6,8,7,9]));
         
       
+//ROTATE AN ARRAY BY K TIMES
 
+console.log("--------------ROTATE AN ARRAY BY K TIMES------------")
+//Anonymous function
+
+var shift1 = function(arr12){
+    const k = 3;
+    for(var i=0; i<k; i++)
+    {
+        var last = arr12.shift();
+        arr12.push(last);
+    }
+        //console.log("Anonymous Function:", arr12);
+        return arr12;
+}
+console.log("Anonymous Function: ",shift1([1,2,3,4,5]));
+
+//IIFE
+
+(function(arr13){ 
+
+    const k=3;
+    for(var i=0; i<k; i++)
+    {
+        var last = arr13.shift();
+        arr13.push(last);
+    }
+    console.log("IIFE: ",arr13);
+
+})([1,2,3,4,5])
+
+// REMOVE DUPLICATES FROM AN ARRAY
+console.log("------------------REMOVE DUPLICATES FROM AN ARRAY---------------------");
+// Anonymous Function
+
+var dup1 = function(arr14){
+   
+    let empty = [];
+    arr14.sort();
+    for(var i=0; i<arr14.length; i++)
+    {
+        if(arr14[i+1]!== arr14[i])
+        {
+            empty.push(arr14[i]);
+        }
+    }
+    return empty;
+}
+console.log("Anonymous function: ",dup1([1,2,2,4,3,3,5,4]));
+
+//IIFE
+
+
+(function(arr15){
+    let empty = [];
+    arr15.sort();
+    for(var i=0; i<arr15.length; i++)
+    {
+        if(arr15[i+1]!== arr15[i])
+        {
+            empty.push(arr15[i]);
+        }
+    }
+    console.log("IIFE: ",empty);
+})([1,2,2,4,3,3,5,4]);
